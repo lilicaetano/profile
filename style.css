@@ -27,6 +27,12 @@ ul {
   text-align: center;
 }
 
+.lavalamp-object {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 #my-photo {
   width: 700px;
   padding: 40px;
