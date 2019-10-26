@@ -7,12 +7,17 @@
     "build:resources": "cp -a ./resources/. ./build/",
     "build:styles": "cp -a ./src/styles/. ./build/styles/ && cp ./node_modules/normalize.css/normalize.css ./build/styles/",
     "build:mustache": "node build.js",
-    "build": "rm -r build && npm run build:resources && npm run build:styles && npm run build:mustache"
+    "build": "rm -r build; npm run build:resources && npm run build:styles && npm run build:mustache",
+    "watch": "nodemon -w src -e css,mustache --exec \"npm run build && serve build/\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "mustache": "^3.1.0",
     "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "serve": "^11.2.0"
   }
 }
