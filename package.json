@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build:resources": "cp -a ./resources/. ./build/",
-    "build:styles": "cp -a ./src/styles/. ./build/styles/",
+    "build:styles": "cp -a ./src/styles/. ./build/styles/ && cp ./node_modules/normalize.css/normalize.css ./build/styles/",
     "build:mustache": "node build.js",
     "build": "rm -r build && npm run build:resources && npm run build:styles && npm run build:mustache"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mustache": "^3.1.0"
+    "mustache": "^3.1.0",
+    "normalize.css": "^8.0.1"
   }
 }

@@ -1,6 +1,11 @@
 .tabs-underlined {
     display: flex;
     align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
   }
   
   .tabs-underlined .tab-underlined {
@@ -17,4 +22,3 @@
     opacity: 1;
     border-bottom: 3px solid #555555;
   }
-  
