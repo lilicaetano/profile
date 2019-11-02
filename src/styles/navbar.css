@@ -7,11 +7,12 @@
   top: 0;
   width: 100%;
   background-color: white;
+  font-family: 'PT Serif', serif;
 }
 
 .tab-underlined {
   color: black;
-  padding: 8px;
+  padding: 14px;
   opacity: .4;
   cursor: pointer;
   text-decoration: none;

@@ -6,28 +6,60 @@
 
     {{> navbar}}
 
-  <div class="banner" style="background-image">
+  <div id="home" class="banner" style="background-image">
     <div class="container">
-      <img src="images/cactos.jpg" alt="Liliana's photo" id="my-photo">
+      <img width="100%" src="images/cactos.jpg" alt="Banner" id="banner">
       <h1>Hello, I am Liliana!</h1>
-      <p>I am here to help you build your projects.</p>
     </div>
   </div>
 
-  <div class="about">
-    <h1>About</h1>
-    <img class="avatar-large" alt="avatar-large" src="images/DSC_5961.JPG">
-    <p>Science graduate starting a career in web development following a 6-month part-time coding bootcamp. Dedicated and driven by challenging, rewarding work. Looking for an opportunity where I can grow my understanding of programming paradigms, design patterns and principles.</p>
+  <div id="about" class="about row no-gutters">
+    <div class="col-md-6 no-gutters">
+      <div class="left-container">
+        <h1>About</h1>
+        <img class="avatar-large" alt="avatar-large" src="images/lili.png">
+      </div>
+    </div>
+    <div class="col-md-6 no-gutters">
+      <div class="right-container">
+        <p>Science graduate starting a career in web development following a 6-month part-time coding bootcamp. Dedicated and driven by challenging, rewarding work. Looking for an opportunity where I can grow my understanding of programming paradigms, design patterns and principles.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="projects">
-  <h1>Projects</h1>
-   
+  <div id="projects" class="projects row no-gutters">
+    <div class="col-md-6 no-gutters">
+      <div class="left-container">
+        <img width="100%" src="images/CrashPad.jpg" alt="CrashPad" id="photo">
+        <img width="100%" src="images/Mango.jpg" alt="Mango" id="photo">
+      </div>
+    </div>
+    <div class="col-md-6 no-gutters">
+      <div class="right-container">
+        <h1>Projects</h1>
+      </div>
+    </div>
   </div>
 
-  <div class="contact">
-  <h1>Contact</h1>
-   
+  <div id="contact" class="contact row no-gutters">
+    <div class="col-md-6 no-gutters">
+      <div class="left-container">
+        <h1>Contact</h1>
+      </div>
+    </div>
+    <div class="col-md-6 no-gutters">
+      <div class="right-container">
+        <p>Liliana Caetano</p>
+          <div class="footer-links">
+                <a class="link-color" href="https://github.com/lilicaetano" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="link-color" href="https://www.linkedin.com/in/lilicaetano/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+          </div> 
+      </div>  
+    </div>  
   </div>
 
     {{> footer}}

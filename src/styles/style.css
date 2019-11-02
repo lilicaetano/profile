@@ -1,31 +1,26 @@
-body {
-  background-color: #fafafa;
-}
-
-
 h1 {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Fredericka the Great', cursive;
   font-size: 40px;
-  color: #006494;
-  text-align: center;
+  color: #051923;
+  text-align: left;
 }
 
 h2 {
   color: #003554;
   font-size: 20px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Fredericka the Great', cursive;
   text-align: center;
 }
 
-p {
+/*p {
   color: #051923;
   text-align: center;
-  font-family: 'VT323', monospace;
+  font-family: 'PT Serif', serif;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+}*/
 
 ul {
   text-align: center;
@@ -37,34 +32,53 @@ ul {
   width: 100%;
 }
 
-#my-photo {
+/*#my-photo {
   width: 100%;
   height: auto;
   background-size: cover;
-}
+}*/
 
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
+  padding: 40px 0;
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  color: #051923;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
   font-weight: bold;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  }
+}
 
-  .avatar-large {
-    width: 56px;
-    border-radius: 50%;
+.avatar-large {
+  width: 156px;
+}
+
+.left-container, .right-container {
+  height: 50vh;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px)
+{
+  .left-container, .right-container {
+    height: 100vh;
   }
+}
+
+.left-container {
+  background: red;
+}
+
+.right-container {
+  background: blue;
+}
   
 .le-wagon-link {
   display: block;

@@ -8,7 +8,7 @@
     "build:styles": "cp -a ./src/styles/. ./build/styles/ && cp ./node_modules/normalize.css/normalize.css ./build/styles/",
     "build:mustache": "node build.js",
     "build": "rm -r build; npm run build:resources && npm run build:styles && npm run build:mustache",
-    "watch": "nodemon -w src -e css,mustache --exec \"npm run build && serve build/\""
+    "watch": "nodemon -w src -e css,mustache --exec \"npm run build && serve -n build/\""
   },
   "author": "",
   "license": "ISC",
