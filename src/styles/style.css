@@ -1,8 +1,96 @@
+.banner img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.banner h1 {
+  margin: 0;
+  color: #051923;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.avatar-large {
+  width: 156px;
+  position: absolute;
+  right: -78px;
+  transform-origin: center;
+}
+
 .left-container h1 {
   font-family: 'Fredericka the Great', cursive;
   font-size: 40px;
   color: #051923;
   text-align: center;
+}
+
+.projects h1 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+  color: #051923;
+  text-align: center;
+}
+
+.left-container, .right-container {
+  height: 50vh;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px)
+{
+  .left-container, .right-container {
+    height: 100vh;
+  }
+}
+
+.left-container {
+  background: lightgray;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.right-container {
+  background: white;
+  align-items: center;
+  display: inline-block;
+  justify-content: center;
+}
+
+.projects .right-container {
+  background: lightgray;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+  color: #051923;
+  text-align: center;
+}
+
+.projects {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  flex: 50%;
+}
+
+.projects img { 
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  top: -100%;
+  right: -100%;
+  bottom: -100%;
+  left: -100%;
+  vertical-align: middle;
 }
 
 /*h2 {
@@ -37,63 +125,8 @@ ul {
   height: auto;
   background-size: cover;
 }*/
-
-.banner img {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  padding-top: 40px;
-}
-
-.banner h1 {
-  margin: 0;
-  color: #051923;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 40px;
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.avatar-large {
-  width: 156px;
-}
-
-.left-container, .right-container {
-  height: 50vh;
-  width: 100%;
-}
-
-@media screen and (min-width: 768px)
-{
-  .left-container, .right-container {
-    height: 100vh;
-  }
-}
-
-.left-container {
-  background: lightgray;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.right-container {
-  background: white;
-  align-items: center;
-  display: inline-block;
-  justify-content: center;
-}
-
-.projects .right-container {
-  background: lightgray;
-}
   
-.le-wagon-link {
+/*.le-wagon-link {
   display: block;
   width: 150px;
   padding: 25px;
@@ -129,5 +162,5 @@ a.le-wagon-link:hover {
 .card-color {
   background: #edf6ffbf;
   margin: 10px auto;
-}
+}*/
 
