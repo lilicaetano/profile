@@ -1,11 +1,90 @@
 <nav class="fixed-top navbar">
   <ul class="list-inline tabs-underlined">
-    <a class="tab-underlined {{#homeView}}active{{/homeView}}" href="#home" title="Home" role="tab">Home</a>
+    <a id="home-tab" class="tab-underlined" onclick="changeHome()" href="#home" title="Home" role="tab">Home</a>
     
-    <a class="tab-underlined {{#aboutView}}active{{/aboutView}}" href="#about" title="About" role="tab">About</a>
+    <a id="about-tab" class="tab-underlined" onclick="changeAbout()" href="#about" title="About" role="tab">About</a>
    
-    <a class="tab-underlined {{#projectsView}}active{{/projectsView}}" href="#projects" title="Projects" role="tab">Projects</a>
+    <a id="projects-tab" class="tab-underlined" onclick="changeProjects()" href="#projects" title="Projects" role="tab">Projects</a>
   
-    <a class="tab-underlined {{#contactView}}active{{/contactView}}" href="#contact" title="Contact" role="tab">Contact</a>
+    <a id="contact-tab" class="tab-underlined" onclick="changeContact()" href="#contact" title="Contact" role="tab">Contact</a>
   </ul>
 </nav>
+
+<script type="text/javascript">
+  const homeTab = document.getElementById("home-tab");
+  const aboutTab =  document.getElementById("about-tab");
+  const projectsTab =  document.getElementById("projects-tab");
+  const contactTab =  document.getElementById("contact-tab");
+
+  const tabs = [homeTab, aboutTab, projectsTab, contactTab];
+
+  function hasClass(element, className) {
+    return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+  }
+
+  function removeClass(el, className) {
+    el.className = el.className.replace(className,'').trim();
+  }
+
+  function addClass(el, className) {
+     
+    if (hasClass(el, className)) {
+      return;
+    };
+
+    el.className += ` ${className}`;
+  }
+
+  function setTabActive(el) {
+    tabs.forEach(tab => el === tab ? addClass(tab, 'active') : removeClass(tab, 'active'));
+  }
+
+
+  function changeHome(){
+    setTabActive(homeTab);
+  }
+  function changeAbout(){
+    setTabActive(aboutTab);    
+  }
+  function changeProjects(){
+    setTabActive(projectsTab);    
+  }
+  function changeContact(){
+    setTabActive(contactTab);    
+  }
+
+  function onScroll(scroll_pos) {
+    const home = document.getElementById("home");
+    const about = document.getElementById("about");
+    const projects = document.getElementById("projects");
+    const contact = document.getElementById("contact");
+
+    if (!home) {
+      return;
+    } 
+
+    if (scroll_pos < about.offsetTop) {
+      changeHome();
+    } else if (scroll_pos < projects.offsetTop) {
+      changeAbout();
+    } else if (scroll_pos < contact.offsetTop) {
+      changeProjects();
+    } else {
+      changeContact();
+    }
+  }
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        onScroll(window.scrollY);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", () => onScroll(window.scrollY));
+
+</script>

@@ -66,31 +66,21 @@
   justify-content: center;
 }
 
-.projects .right-container {
-  background: lightgray;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 40px;
-  color: #051923;
-  text-align: center;
-}
-
 .projects {
-  position: relative;
   overflow: hidden;
-  width: 100%;
-  flex: 50%;
+  background: white;
 }
 
-.projects img { 
-  position: absolute;
+.projects > img {
+  height: 200px;
   width: 100%;
-  height: auto;
-  margin: auto;
-  top: -100%;
-  right: -100%;
-  bottom: -100%;
-  left: -100%;
-  vertical-align: middle;
+  object-fit: cover;
+}
+
+.projects p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
 }
 
 /*h2 {
