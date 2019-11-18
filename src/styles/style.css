@@ -20,10 +20,18 @@
 }
 
 .avatar-large {
-  width: 156px;
   position: absolute;
-  right: -78px;
-  transform-origin: center;
+  bottom: -67.5px;
+  width: 156px;
+  height: 135px;
+}
+
+@media screen and (min-width: 768px)
+{
+  .avatar-large {
+    right: -78px;
+    bottom: initial;
+  }
 }
 
 .left-container h1 {
@@ -41,14 +49,15 @@
 }
 
 .left-container, .right-container {
-  height: 50vh;
+  min-height: 50vh;
+  height: 100%;
   width: 100%;
 }
 
 @media screen and (min-width: 768px)
 {
   .left-container, .right-container {
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 
@@ -60,15 +69,41 @@
 }
 
 .right-container {
-  background: white;
-  align-items: center;
-  display: inline-block;
-  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .projects {
   overflow: hidden;
   background: white;
+}
+
+.projects {
+  flex-wrap: wrap-reverse;
+}
+
+@media screen and (min-width: 768px)
+{
+  .projects-title {
+    position: absolute;
+    top: 50vh;
+  }
+}
+
+.projects-title-fixed {
+  position: fixed;
+}
+
+.projects-title-bottom {
+  position: absolute;
+  top: calc(100% - 50vh);
+}
+
+@media screen and (min-width: 768px)
+{
+  .projects {
+    flex-wrap: wrap;
+  }
 }
 
 .projects > img {
@@ -83,74 +118,28 @@
   margin: 0;
 }
 
-/*h2 {
-  color: #003554;
-  font-size: 20px;
-  font-family: 'Fredericka the Great', cursive;
-  text-align: center;
+.about .cards {
+  align-self: flex-end;
 }
 
-p {
-  color: #051923;
-  text-align: center;
-  font-family: 'PT Serif', serif;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.about-description {
+  margin-top: 70px;
+  margin-left: 70px;
 }
 
-ul {
-  text-align: center;
+.footer-links {
+  display: flex;
+  align-items: center;
 }
 
-.lavalamp-object {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/*#my-photo {
-  width: 100%;
-  height: auto;
-  background-size: cover;
-}*/
-  
-/*.le-wagon-link {
-  display: block;
-  width: 150px;
-  padding: 25px;
-  border-radius: 10px;
-  background: #006494;
-  font-size: 15px;
-  margin: 0 auto;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-family: arial;
-}
-
-a.le-wagon-link:hover {
-  background: black;
-}
-
-.social-links li {
-  display: inline-block;
-  width: 40px;
-  padding: 10px;
-  font-size: 40px;
-}
-
-.link-color {
-  color: #006494;
-}
-
-.link-color:hover {
+.footer-links a {
   color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
 }
 
-.card-color {
-  background: #edf6ffbf;
-  margin: 10px auto;
-}*/
-
+.footer-links a:hover {
+  opacity: 1;
+}

@@ -58,10 +58,27 @@
     const about = document.getElementById("about");
     const projects = document.getElementById("projects");
     const contact = document.getElementById("contact");
+    const projectsTitle = document.getElementById("projects-title");
 
     if (!home) {
       return;
-    } 
+    }
+
+    if (window.innerWidth >= 768) {
+
+      if (scroll_pos <= (contact.offsetTop - window.innerHeight) && scroll_pos > projects.offsetTop) { 
+        addClass(projectsTitle, 'projects-title-fixed');
+      } else {
+        removeClass(projectsTitle, 'projects-title-fixed');
+      }
+
+      if (scroll_pos > (contact.offsetTop - window.innerHeight)) {
+        addClass(projectsTitle, 'projects-title-bottom');
+      } else {
+        removeClass(projectsTitle, 'projects-title-bottom');
+      }
+
+    }
 
     if (scroll_pos < about.offsetTop) {
       changeHome();
