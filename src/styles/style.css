@@ -1,10 +1,9 @@
 .banner img {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  padding-top: 40px;
+  object-fit: cover;
+  object-position: right bottom;
+  width: 100vw;
+  max-height: 100vh;
+  padding-top: 56px;
 }
 
 .banner h1 {
