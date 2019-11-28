@@ -1,5 +1,5 @@
 <nav class="fixed-top navbar">
-  <ul class="list-inline tabs-underlined">
+  <ul id="tabs" class="list-inline tabs-underlined">
     <a id="home-tab" class="tab-underlined" onclick="changeHome()" href="#home" title="Home" role="tab">Home</a>
     
     <a id="about-tab" class="tab-underlined" onclick="changeAbout()" href="#about" title="About" role="tab">About</a>
@@ -59,9 +59,16 @@
     const projects = document.getElementById("projects");
     const contact = document.getElementById("contact");
     const projectsTitle = document.getElementById("projects-title");
+    const navbarTabs = document.getElementById("tabs");
 
     if (!home) {
       return;
+    }
+
+    if (scroll_pos < 10) {
+      removeClass(navbarTabs, 'tabs-underlined-solid');
+    } else {
+      addClass(navbarTabs, 'tabs-underlined-solid')
     }
 
     if (window.innerWidth >= 768) {

@@ -1,0 +1,51 @@
+.banner img {
+    object-fit: cover;
+    object-position: right bottom;
+    width: 100vw;
+    max-height: 100vh;
+  }
+  
+  .banner h1 {
+    margin: 0;
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 32px;
+    text-shadow: 1px 1px 3px black;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+
+  .banner p {
+    margin: 0;
+    color: white;
+    font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px black;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn-gradient {
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: linear-gradient(#167FFB, #0F60C4);
+    transition: 0.3s ease;
+    border: 1px solid #0F60C4;
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn-gradient:hover {
+    background: linear-gradient(#147EFF, #0F67DA);
+    color: white;
+  }  

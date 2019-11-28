@@ -1,38 +1,3 @@
-.banner img {
-  object-fit: cover;
-  object-position: right bottom;
-  width: 100vw;
-  max-height: 100vh;
-  padding-top: 56px;
-}
-
-.banner h1 {
-  margin: 0;
-  color: #051923;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 40px;
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.avatar-large {
-  position: absolute;
-  bottom: -67.5px;
-  width: 156px;
-  height: 135px;
-}
-
-@media screen and (min-width: 768px)
-{
-  .avatar-large {
-    right: -78px;
-    bottom: initial;
-  }
-}
-
 .left-container h1 {
   font-family: 'Fredericka the Great', cursive;
   font-size: 40px;
@@ -126,12 +91,12 @@
   margin-left: 70px;
 }
 
-.footer-links {
+.contact-links {
   display: flex;
   align-items: center;
 }
 
-.footer-links a {
+.contact-links a {
   color: black;
   opacity: 0.15;
   text-decoration: none;
@@ -139,6 +104,6 @@
   padding: 0px 10px;
 }
 
-.footer-links a:hover {
+.contact-links a:hover {
   opacity: 1;
 }
