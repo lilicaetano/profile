@@ -17,84 +17,74 @@
               https://res.cloudinary.com/dwhyp7x92/image/upload/dpr_auto,f_auto,fl_progressive:semi,q_auto:best,g_south_west,ar_16:9,c_fill/q_80,w_1536/v1574539575/Portofolio/liliana_essaouira.jpg 1536w"
       src="https://res.cloudinary.com/dwhyp7x92/image/upload/dpr_auto,f_auto,fl_progressive:semi,q_auto:best,g_south_west,ar_16:9,c_fill/q_80,w_1024/v1574539575/Portofolio/liliana_essaouira.jpg"
       alt="Liliana in Essaouira" />
-    <h1>Hello, I'm Liliana!</h1>
-    <p>I'm Web Developer.</p>
-    <a class="btn btn-gradient" href="mailto:lili.caetano1@gmail.com" target="_blank">Contact me</a>
+    <div class="margin">
+      <h1>Hello, I'm Liliana!</h1>
+      <p>I'm Web Developer.</p>
+      <a class="btn btn-contact-home" href="mailto:lili.caetano1@gmail.com" target="_blank">Contact me</a>
+    </div>
   </div>
 
-  <div id="about" class="about row no-gutters">
-    <div class="col-md-6 no-gutters">
-      <div class="left-container">
-        <p>I'm a <strong>Full-Stack Developer</strong> based in London.</p>
-        <p>I have a passion for learning new technologies and love to create websites and web applications.</p>
-        <p>I use the latest technologies to create fast, responsive, intuitive and dynamic web applications.</p>
+  <div class="margin">
+    <div id="about" class="about row no-gutters">
+      <div id="about-title" class="about-title">
+        <h1>About me</h1>
       </div>
+      <div>
+        <p>I'm a <strong>Full-Stack Developer</strong> based in London. I have a passion for learning new technologies and love to create websites and web applications. I use the latest technologies to create fast, responsive, intuitive and dynamic web applications.</p>
+      </div> 
     </div>
-    <div class="col-md-6 no-gutters">
-      <div class="right-container">
-        <div class="about-description">
+    
+    <div class="about-description">
 
-        {{> cards}}
+      {{> cards}}
 
+    </div>
+
+    <div id="projects" class="projects row no-gutters">
+      <div id="projects-title" class="projects-title">
+        <h1>Projects</h1>
+      </div>
+        
+      <div class="project-card col-md-5 no-gutters">
+        <img width="100%" src="images/CrashPad.jpg" alt="CrashPad" id="photo">
+        <div class="project-card-info">
+          <h1>Crash-Pad</h1>
+          <p>Website that allows you to book a room or property anywhere in the world.</p>
+          <ul>Developed a responsive design for the property listing using CSS Grid with different column layouts</ul>
+        </div>
+      </div>  
+      <div class="project-card col-md-5 no-gutters">
+        <img width="100%" src="images/Mango.jpg" alt="Mango" id="photo">
+        <div class="project-card-info">
+          <h1>Mango</h1>
+          <p>Never eat alone! Problem solved always have a companion to eat with when out.</p>
+          <ul>Developed the chat between users using ActionCable  for real-time communication</ul>
+          <ul>Implemented the star rating feature using jQuery</ul>
+          <ul>Implemented the user's profile avatar upload feature using cloudinary’s API</ul>
+          <a class="link-color" href="" target="_blank"><i class="fas fa-video"></i></a>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="projects" class="projects row no-gutters">
-    <div class="col-md-6 no-gutters">
-      <div class="right-container">
-        <div class="crashPad">
-            <img width="100%" src="images/CrashPad.jpg" alt="CrashPad" id="photo">
-            <h1>Crash-Pad</h1>
-            <p>Website that allows you to book a room or property anywhere in the world.</p>
-            <ul>Developed a responsive design for the property listing using CSS Grid with different column layouts</ul>
-          <div class="mango">
-            <img width="100%" src="images/Mango.jpg" alt="Mango" id="photo">
-            <h1>Mango</h1>
-            <p>Never eat alone! Problem solved always have a companion to eat with when out.</p>
-            <ul>Developed the chat between users using ActionCable  for real-time communication</ul>
-            <ul>Implemented the star rating feature using jQuery</ul>
-            <ul>Implemented the user's profile avatar upload feature using cloudinary’s API</ul>
-          </div>
-        </div> 
-      </div>
-    </div>
-    <div class="col-md-6 no-gutters">
-      <div class="left-container">
-        <h1 id="projects-title" class="projects-title">Projects</h1>
-      </div>
-    </div>
-  </div>
-
-  <div id="contact" class="contact row no-gutters">
-    <div class="col-md-6 no-gutters">
-      <div class="left-container">
+    <div id="contact" class="contact row no-gutters">
+      <div id="contact-title" class="contact-title">
         <h1>Contact</h1>
+        <img width="50%" src="images/paper-plane.png" alt="PaperPlane" id="photo">
       </div>
-    </div>
-    <div class="col-md-6 no-gutters">
-      <div class="right-container">
-        <p>If you have a project that you want to get started,</p> 
-        <p>think you need my help with something,</p>
-        <p>or looking for someone to collabrate on your existing project, then get in touch.</p>
-      
-          <div class="contact-links">
-            <a class="link-color" href="mailto:lili.caetano1@gmail.com" target="_blank">
-              <i class="far fa-envelope"></i>
-            </a>
-            <a class="link-color" href="https://github.com/lilicaetano" target="_blank">
-              <i class="fas fa-file-alt"></i>
-            </a>
-            <a class="link-color" href="https://github.com/lilicaetano" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-            <a class="link-color" href="https://www.linkedin.com/in/lilicaetano/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div> 
+
+      <div class="contact-container">
+        <p>If you have a project that you want to get started, think you need my help with something, or looking for someone to collabrate on your existing project, then get in touch.</p>
+        
+        <a class="btn btn-contact" href="mailto:lili.caetano1@gmail.com" target="_blank">Contact me</a>
+        
+        <a class="link-color" href="https://github.com/lilicaetano" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="link-color" href="https://www.linkedin.com/in/lilicaetano/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>  
-    </div>  
+    </div>
   </div>
 
     {{> footer}}

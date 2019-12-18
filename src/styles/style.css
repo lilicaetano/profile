@@ -1,109 +1,88 @@
-.left-container h1 {
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 40px;
-  color: #051923;
-  text-align: center;
+/* add margin to webpage */
+.margin {
+  margin: 0 5em;
 }
 
-.projects h1 {
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 40px;
-  color: #051923;
-  text-align: center;
-}
-
-.left-container, .right-container {
-  min-height: 50vh;
-  height: 100%;
-  width: 100%;
-}
-
-@media screen and (min-width: 768px)
-{
-  .left-container, .right-container {
-    min-height: 100vh;
-  }
-}
-
-.left-container {
-  background: lightgray;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.right-container {
-  display: flex;
-  flex-flow: row wrap;
+/* add top and bottom margin to sections */
+.about {
+  margin: 5em 0em 5em;
 }
 
 .projects {
+  margin: 5em 0em 5em;
+}
+
+.contact {
+  margin: 5em 0em 5em;
+}
+
+/* style header in each section */
+.about-title h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: #131329;
+  margin: 2em 0em 2em;
+}
+
+.projects-title h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: #131329;
+  margin: 2em 15em 2em 0em;
+}
+
+.contact-title h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: #131329;
+  margin: 2em 0em 2em;
+}
+
+/* style paragraph in about section */
+.about p {
+  font-family: 'PT Serif', serif;
+  font-size: 1.25rem;
+}
+
+/* project cards style */
+.project-card {
   overflow: hidden;
   background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 1em 1em;
 }
 
-.projects {
-  flex-wrap: wrap-reverse;
-}
-
-@media screen and (min-width: 768px)
-{
-  .projects-title {
-    position: absolute;
-    top: 50vh;
-  }
-}
-
-.projects-title-fixed {
-  position: fixed;
-}
-
-.projects-title-bottom {
-  position: absolute;
-  top: calc(100% - 50vh);
-}
-
-@media screen and (min-width: 768px)
-{
-  .projects {
-    flex-wrap: wrap;
-  }
-}
-
-.projects > img {
+.project-card > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.projects p {
+.project-card h1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.project-card p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
-.about .cards {
-  align-self: flex-end;
+/* buttons style */
+.btn-contact {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
-.about-description {
-  margin-top: 70px;
-  margin-left: 70px;
-}
-
-.contact-links {
-  display: flex;
-  align-items: center;
-}
-
-.contact-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-
-.contact-links a:hover {
+.btn-contact:hover {
   opacity: 1;
+}
+
+/* paper plane style */
+.contact-title img{
+  opacity: 0.2;
 }

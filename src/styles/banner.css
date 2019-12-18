@@ -8,7 +8,7 @@
   .banner h1 {
     margin: 0;
     color: white;
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Permanent Marker', cursive;
     font-size: 32px;
     text-shadow: 1px 1px 3px black;
     font-weight: bold;
@@ -31,21 +31,20 @@
     transform: translate(-50%, -50%);
   }
   
-  .btn-gradient {
-    color: white;
+  .btn-contact-home {
+    color: #4A4A4A;
+    border: 1px solid #4A4A4A;
     padding: 8px 24px;
-    border-radius: 4px;
-    font-weight: bold;
-    background: linear-gradient(#167FFB, #0F60C4);
-    transition: 0.3s ease;
-    border: 1px solid #0F60C4;
+    border-radius: 50px;
+    font-weight: lighter;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
     position: absolute;
     top: 70%;
     left: 15%;
     transform: translate(-50%, -50%);
   }
   
-  .btn-gradient:hover {
-    background: linear-gradient(#147EFF, #0F67DA);
-    color: white;
+  .btn-contact-home:hover {
+    opacity: 1;
   }  

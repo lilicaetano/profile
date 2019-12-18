@@ -14,23 +14,23 @@
 } 
 
 .tabs-underlined-solid {
-  background: white;
+  background:#131329;
   border-bottom-color:grey;
   border-bottom-width: 2px;
 }
 
 .tabs-underlined-solid .tab-underlined {
-  color:black;
+  color: white;
   opacity: 0.4;
   text-shadow: none;
 }
 
 .tabs-underlined-solid .tab-underlined:hover {
-  color: black;
+  color: white;
 }
 
 .tabs-underlined-solid .tab-underlined.active {
-  border-bottom-color: black;
+  border-bottom-color: white;
 }
 
 .tab-underlined {

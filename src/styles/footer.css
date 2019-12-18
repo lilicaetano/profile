@@ -1,8 +1,8 @@
 .footer {
-  background: #F4F4F4;
+  background:#e1e1f1;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-  color: rgba(0,0,0,0.3);
+  color:#131329;
   text-align: right;
 }
