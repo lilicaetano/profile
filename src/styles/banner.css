@@ -1,10 +1,17 @@
+.banner {
+  position: relative;
+}
+
 .banner img {
     object-fit: cover;
     object-position: right bottom;
     width: 100vw;
     max-height: 100vh;
   }
-  
+  .banner .banner-text {
+   bottom: 20%;
+   position: absolute;
+  }
   .banner h1 {
     margin: 0;
     color: white;
@@ -12,10 +19,7 @@
     font-size: 32px;
     text-shadow: 1px 1px 3px black;
     font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
+    padding-bottom: 1em;
   }
 
   .banner p {
@@ -24,13 +28,10 @@
     font-family:'Roboto', sans-serif;
     font-size: 20px;
     text-shadow: 1px 1px 3px black;
-    font-weight: bold;
-    position: absolute;
-    top: 60%;
-    left: 20%;
-    transform: translate(-50%, -50%);
+    font-weight: bold;  
+    padding-bottom: 1em;
   }
-  
+
   .btn-contact-home {
     color: #4A4A4A;
     border: 1px solid #4A4A4A;
@@ -39,12 +40,32 @@
     font-weight: lighter;
     opacity: 0.6;
     transition: opacity 0.3s ease;
-    position: absolute;
-    top: 70%;
-    left: 15%;
-    transform: translate(-50%, -50%);
   }
   
   .btn-contact-home:hover {
     opacity: 1;
   }  
+
+  @media (max-width: 800px) and (min-width: 600px) { 
+    .banner h1 {
+      font-size: 20px;
+    }
+    .banner p {
+      font-size: 15px;
+    }
+    .btn-contact-home {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 600px) { 
+    .banner h1 {
+      font-size: 10px;
+    }
+    .banner p {
+      font-size: 10px;
+    }
+    .btn-contact-home {
+    font-size: 10px;
+    }
+  }
