@@ -26,19 +26,25 @@
 .projects-title h1 {
   font-family: 'Permanent Marker', cursive;
   color: #131329;
-  margin: 2em 15em 2em 0em;
+  margin: 2em 20em 2em 0em;
 }
 
 .contact-title h1 {
   font-family: 'Permanent Marker', cursive;
   color: #131329;
-  margin: 2em 0em 2em;
+  margin: 2em 20em 2em 0em;
 }
 
 /* style paragraph in about section */
 .about p {
   font-family: 'PT Serif', serif;
   font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  line-height: 2.5em;
+  text-align: justify;
 }
 
 /* project cards style */
@@ -56,33 +62,76 @@
 }
 
 .project-card h1 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
-  margin: 0;
+  margin: 1rem;
+  font-family: 'PT Serif', serif;
+  text-align: center;
 }
 
 .project-card p {
+  font-size: 14px;
+  margin: 1rem;
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.project-card ul {
   font-size: 12px;
-  opacity: .7;
-  margin: 0;
+  opacity: 0.8;
+  margin: 1rem;
+  font-family: 'PT Serif', serif;
+  text-align: center;
+}
+
+.contact-container {
+  justify-content: center;
+}
+
+.contact-container p {
+  font-family: 'PT Serif', serif;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 0;
+  margin-left: 0;
+  line-height: 2.5em;
+  text-align: justify;
+}
+
+.links a {
+  color: #131329;
+  opacity: 0.4;
+  text-decoration: none;
+  font-size: 32px;
+  padding: 0px 10px;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+.links a:hover {
+  opacity: 1;
 }
 
 /* buttons style */
 .btn-contact {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: white;
+  background: #131329;
   padding: 8px 24px;
   border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
+  font-family: 'Roboto', sans-serif;
+  opacity: 1;
   transition: opacity 0.3s ease;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .btn-contact:hover {
-  opacity: 1;
-}
+  opacity: 0.8;
+  color: white;
+}  
 
 /* paper plane style */
-.contact-title img{
+.contact-image {
   opacity: 0.2;
 }
