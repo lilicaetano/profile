@@ -19,7 +19,7 @@
 
 .about-card {
   opacity: 0.7;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s;
   padding-left: 5px;
   padding-right: 0px;
   padding-top: 0px;
@@ -27,4 +27,5 @@
 }
 .about-card:hover {
   opacity: 1;
+  transform: scale(1.02);
 }

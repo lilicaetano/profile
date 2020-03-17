@@ -12,6 +12,9 @@
    bottom: 20%;
    position: absolute;
    text-align: center;
+   padding: 15px;
+   background-color: rgba(0,0,0,0.15);
+   box-shadow: 0 0 60px rgba(0,0,0,0.3);
   }
   .banner h1 {
     margin: 0;
@@ -39,14 +42,13 @@
     padding: 8px 24px;
     border-radius: 50px;
     font-family: 'Roboto', sans-serif;
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease;
   }
   
   .btn-contact-home:hover {
-    opacity: 0.8;
     color: white;
-  }  
+    transform: scale(1.02);
+  }
 
   @media (max-width: 800px) and (min-width: 600px) { 
     .banner h1 {
@@ -68,6 +70,6 @@
       font-size: 10px;
     }
     .btn-contact-home {
-    font-size: 10px;
+      font-size: 10px;
     }
   }
