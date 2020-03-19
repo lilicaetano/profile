@@ -1,0 +1,52 @@
+.contact-container p {
+  font-family: 'PT Serif', serif;
+  font-size: 1.25rem;
+  margin: 1em 5em 2em 0em;
+  line-height: 2.5em;
+  text-align: justify;
+}
+
+.links a {
+  color: #131329;
+  opacity: 0.6;
+  text-decoration: none;
+  font-size: 32px;
+  padding: 0px 10px;
+  margin-bottom: 2em;
+  justify-content: center;
+  transition: opacity 300ms;
+}
+
+.links i {
+  transition: transform 300ms;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
+.links a:hover i {
+  transform: scale(1.20);
+}
+
+/* buttons style */
+.btn-contact {
+  color: white;
+  background: #131329;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-family: 'PT Serif', serif;
+  justify-content: center;
+  margin-bottom: 2em;
+  transition: all 300ms;
+}
+
+.btn-contact:hover {
+  color: white;
+  transform: scale(1.02);
+}  
+
+/* paper plane style */
+.contact-image {
+  opacity: 0.2;
+}

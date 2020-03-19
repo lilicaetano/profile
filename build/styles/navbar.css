@@ -1,0 +1,53 @@
+.tabs-underlined {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  margin: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-shadow: 1px 1px 3px black;
+  font-family: 'PT Serif', serif;
+  font-size: 1.25rem;
+  background: linear-gradient(to bottom, rgba(0,0,0, 0.3), 65%, transparent);
+  transition: background 0.5s ease;
+} 
+
+.tabs-underlined-solid {
+  background:#131329;
+  border-bottom-color:grey;
+  border-bottom-width: 2px;
+}
+
+.tabs-underlined-solid .tab-underlined {
+  color: white;
+  opacity: 0.4;
+  text-shadow: none;
+}
+
+.tabs-underlined-solid .tab-underlined:hover {
+  color: white;
+}
+
+.tabs-underlined-solid .tab-underlined.active {
+  border-bottom-color: white;
+}
+
+.tab-underlined {
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 4px solid transparent;
+  transition: border 0.2s ease-in-out;
+}
+
+.tab-underlined:hover {
+  color: white;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.tab-underlined.active {
+  opacity: 1;
+  border-bottom: 3px solid white;
+}
