@@ -13,8 +13,6 @@
    position: absolute;
    text-align: center;
    padding: 15px;
-   background-color: rgba(0,0,0,0.15);
-   box-shadow: 0 0 60px rgba(0,0,0,0.3);
   }
   .banner h1 {
     margin: 0;
