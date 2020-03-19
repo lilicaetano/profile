@@ -7,7 +7,7 @@
   top: 0;
   width: 100%;
   text-shadow: 1px 1px 3px black;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'PT Serif', serif;
   font-size: 1.25rem;
   background: linear-gradient(to bottom, rgba(0,0,0, 0.3), 65%, transparent);
   transition: background 0.5s ease;
