@@ -1,0 +1,257 @@
+<html>
+
+  <head>
+    <title>Liliana Caetano</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Sriracha|Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/banner.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+
+    <link rel="icon" href="https://papermilkdesign.com/images250_/circle-clipart-letter-4.png">
+  </head>
+  <body>
+
+    <nav class="fixed-top navbar">
+      <ul id="tabs" class="list-inline tabs-underlined">
+        <a id="home-tab" class="tab-underlined" onclick="changeHome()" href="#home" title="Home" role="tab">Home</a>
+        
+        <a id="about-tab" class="tab-underlined" onclick="changeAbout()" href="#about" title="About" role="tab">About</a>
+       
+        <a id="projects-tab" class="tab-underlined" onclick="changeProjects()" href="#projects" title="Projects" role="tab">Projects</a>
+      
+        <a id="contact-tab" class="tab-underlined" onclick="changeContact()" href="#contact" title="Contact" role="tab">Contact</a>
+      </ul>
+    </nav>
+
+    <script type="text/javascript">
+      const homeTab = document.getElementById("home-tab");
+      const aboutTab =  document.getElementById("about-tab");
+      const projectsTab =  document.getElementById("projects-tab");
+      const contactTab =  document.getElementById("contact-tab");
+
+      const tabs = [homeTab, aboutTab, projectsTab, contactTab];
+
+      function hasClass(element, className) {
+        return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+      }
+
+      function removeClass(el, className) {
+        el.className = el.className.replace(className,'').trim();
+      }
+
+      function addClass(el, className) {
+         
+        if (hasClass(el, className)) {
+          return;
+        };
+
+        el.className += ` ${className}`;
+      }
+
+      function setTabActive(el) {
+        tabs.forEach(tab => el === tab ? addClass(tab, 'active') : removeClass(tab, 'active'));
+      }
+
+
+      function changeHome(){
+        setTabActive(homeTab);
+      }
+      function changeAbout(){
+        setTabActive(aboutTab);    
+      }
+      function changeProjects(){
+        setTabActive(projectsTab);    
+      }
+      function changeContact(){
+        setTabActive(contactTab);    
+      }
+
+      function onScroll(scroll_pos) {
+        const home = document.getElementById("home");
+        const about = document.getElementById("about");
+        const projects = document.getElementById("projects");
+        const contact = document.getElementById("contact");
+        const projectsTitle = document.getElementById("projects-title");
+        const navbarTabs = document.getElementById("tabs");
+
+        if (!home) {
+          return;
+        }
+
+        if (scroll_pos < 10) {
+          removeClass(navbarTabs, 'tabs-underlined-solid');
+        } else {
+          addClass(navbarTabs, 'tabs-underlined-solid')
+        }
+
+        if (window.innerWidth >= 768) {
+
+          if (scroll_pos <= (contact.offsetTop - window.innerHeight) && scroll_pos > projects.offsetTop) { 
+            addClass(projectsTitle, 'projects-title-fixed');
+          } else {
+            removeClass(projectsTitle, 'projects-title-fixed');
+          }
+
+          if (scroll_pos > (contact.offsetTop - window.innerHeight)) {
+            addClass(projectsTitle, 'projects-title-bottom');
+          } else {
+            removeClass(projectsTitle, 'projects-title-bottom');
+          }
+
+        }
+
+        if (scroll_pos < about.offsetTop) {
+          changeHome();
+        } else if (scroll_pos < projects.offsetTop) {
+          changeAbout();
+        } else if (scroll_pos < contact.offsetTop) {
+          changeProjects();
+        } else {
+          changeContact();
+        }
+      }
+
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            onScroll(window.scrollY);
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => onScroll(window.scrollY));
+
+    </script>
+  <div id="home" class="banner">
+    
+    <img
+      sizes="100vw"
+      srcset="https://res.cloudinary.com/dwhyp7x92/image/upload/dpr_auto,f_auto,fl_progressive:semi,q_auto:best,g_south_west,ar_16:9,c_fill/q_70,w_256/v1574539575/Portofolio/liliana_essaouira.jpg 256w,
+              https://res.cloudinary.com/dwhyp7x92/image/upload/dpr_auto,f_auto,fl_progressive:semi,q_auto:best,g_south_west,ar_16:9,c_fill/q_70,w_512/v1574539575/Portofolio/liliana_essaouira.jpg 512w,
+              https://res.cloudinary.com/dwhyp7x92/image/upload/dpr_auto,f_auto,fl_progressive:semi,q_auto:best,g_south_west,ar_16:9,c_fill/q_70,w_768/v1574539575/Portofolio/liliana_essaouira.jpg 768w,
+              https://res.cloudinary.com/dwhyp7x92/image/upload/dpr_auto,f_auto,fl_progressive:semi,q_auto:best,g_south_west,ar_16:9,c_fill/q_80,w_1024/v1574539575/Portofolio/liliana_essaouira.jpg 1024w,
+              https://res.cloudinary.com/dwhyp7x92/image/upload/dpr_auto,f_auto,fl_progressive:semi,q_auto:best,g_south_west,ar_16:9,c_fill/q_80,w_1280/v1574539575/Portofolio/liliana_essaouira.jpg 1280w,
+              https://res.cloudinary.com/dwhyp7x92/image/upload/dpr_auto,f_auto,fl_progressive:semi,q_auto:best,g_south_west,ar_16:9,c_fill/q_80,w_1536/v1574539575/Portofolio/liliana_essaouira.jpg 1536w"
+      src="https://res.cloudinary.com/dwhyp7x92/image/upload/dpr_auto,f_auto,fl_progressive:semi,q_auto:best,g_south_west,ar_16:9,c_fill/q_80,w_1024/v1574539575/Portofolio/liliana_essaouira.jpg"
+      alt="Liliana in Essaouira" />
+    <div class="margin banner-text">
+      <h1>Hello, I'm Liliana!</h1>
+      <p>I'm Web Developer.</p>
+      <a class="btn btn-contact-home" href="mailto:lili.caetano1@gmail.com" target="_blank">Contact me</a>
+    </div>
+  </div>
+
+  <div class="margin">
+    <div id="about" class="about row no-gutters">
+
+      <div id="about-title" class="about-title">
+        <h1>About me</h1>
+      </div>
+
+        <div class="about-description">
+          <p>I'm a <strong>Full-Stack Developer</strong> based in London. I have a passion for learning new technologies and love to create websites and web applications. I use the latest technologies to create fast, responsive, intuitive and dynamic web applications.</p>
+        </div> 
+
+        <div class="cards container">
+          <div class="about-cards row">
+            <div class="about-card col-4 no-gutters">
+              <div style="background-color: #FFD700"><img src="images/js.png"></div>
+            </div>
+            <div class="about-card col-4 no-gutters">
+              <div style="background-color: #FF7F50;"><img src="images/html5.png"></div> 
+            </div>
+            <div class="about-card col-4 no-gutters">
+              <div style="background-color: #00BFFF;"><img src="images/css-3.png"></div>
+            </div>
+            <div class="about-card col-4 no-gutters">
+              <div style="background-color: #663399;"><img src="images/bootstrap.png"></div>
+            </div>
+            <div class="about-card col-4 no-gutters">
+              <div style="background-color: #cc0000;"><img src="images/rails.png"></div>
+            </div>
+            <div class="about-card col-4 no-gutters">
+              <div style="background-color: #4682B4;"><img src="images/postgresql.png"></div> 
+            </div>
+          </div>
+        </div>
+      </div>  
+
+    </div>
+  </div>
+  <div class="margin">
+    <div id="projects" class="projects row no-gutters">
+          
+      <div id="projects-title" class="projects-title">
+        <h1>Projects</h1>
+      </div>
+
+      <div class="project-card col-md-5 no-gutters">
+        <a href="https://crash-pad-le-wagon.herokuapp.com/" target="_blank">
+          <img width="100%" src="images/CrashPad.jpg" alt="CrashPad" id="photo">
+          <div class="project-card-info">
+            <h1>Crash-Pad</h1>
+            <p>Website that allows you to book a room or property anywhere in the world.</p>
+          </div>
+        </a>
+      </div>  
+      <div class="project-card col-md-5 no-gutters">
+        <a href="https://www.mango-app.com/" target="_blank">
+          <img width="100%" src="images/Mango.jpg" alt="Mango" id="photo">
+          <div class="project-card-info">
+            <h1>Mango</h1>
+            <p>Never eat alone! Problem solved always have a companion to eat with when out.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="margin">
+    <div id="contact" class="contact row no-gutters">
+        
+      <div id="contact-title" class="contact-title">
+        <h1>Contact</h1>
+      </div>
+            
+      <div class="contact-image col-md-6 no-gutters">
+        <img width="50%" src="images/paper-plane.png" alt="PaperPlane" id="photo">
+      </div>
+
+      <div class="contact-container col-md-6 no-gutters">
+        <p>If you have a project that you want to get started, think you need my help with something, or looking for someone to collaborate on your existing project, then get in touch.</p>
+                
+        <a class="btn btn-contact" href="mailto:lili.caetano1@gmail.com" target="_blank">Message me</a>
+          <div class="links">
+          <a class="link-color" href="https://github.com/lilicaetano" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="link-color" href="https://www.linkedin.com/in/lilicaetano/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a> 
+          </div> 
+      </div>  
+    </div>
+  </div>
+
+    <div class="footer">
+        <div class="footer-copyright">
+            © 2020 Liliana Caetano. All rights reserved.
+        </div>
+    </div>    
+  </body>
+</html>

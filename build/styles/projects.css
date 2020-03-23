@@ -1,0 +1,41 @@
+.project-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 1em 2em;
+  display: flex;
+  transition: all 300ms;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+}
+
+.project-card > img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-card a:hover {
+  text-decoration: none;
+}
+
+.project-card h1 {
+  font-size: 2rem;
+  color: black;
+  font-weight: bold;
+  margin: 1rem;
+  font-family: 'PT Serif', serif;
+  text-align: center;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: black;
+  margin: 1.25rem;
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
+  text-align: center;
+}

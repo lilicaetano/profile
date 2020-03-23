@@ -1,0 +1,73 @@
+.banner {
+  position: relative;
+}
+
+.banner img {
+    object-fit: cover;
+    object-position: right bottom;
+    width: 100vw;
+    max-height: 100vh;
+  }
+  .banner .banner-text {
+   bottom: 20%;
+   position: absolute;
+   text-align: center;
+   padding: 15px;
+  }
+  .banner h1 {
+    margin: 0;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 32px;
+    text-shadow: 1px 1px 3px black;
+    font-weight: bold;
+    padding-bottom: 1em;
+  }
+
+  .banner p {
+    margin: 0;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px black;
+    font-weight: bold;  
+    padding-bottom: 1.5em;
+  }
+
+  .btn-contact-home {
+    color: white;
+    background: #131329;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-family: 'PT Serif', serif;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-contact-home:hover {
+    color: white;
+    transform: scale(1.02);
+  }
+
+  @media (max-width: 800px) and (min-width: 600px) { 
+    .banner h1 {
+      font-size: 20px;
+    }
+    .banner p {
+      font-size: 15px;
+    }
+    .btn-contact-home {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 600px) { 
+    .banner h1 {
+      font-size: 10px;
+    }
+    .banner p {
+      font-size: 10px;
+    }
+    .btn-contact-home {
+      font-size: 10px;
+    }
+  }
